@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: zayanahmedpipelinesjavascriptdocker 
-          image: mycontainerregistryforfipakstesting.azurecr.io/zayanahmedpipelinesjavascriptdocker:invalid
+          image: mycontainerregistryforfipakstesting.azurecr.io/zayanahmedpipelinesjavascriptdockerinvalid
           ports:
           - containerPort: 8080
           readinessProbe:
