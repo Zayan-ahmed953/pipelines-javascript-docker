@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zayanahmedpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zayanahmedpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: zayanahmedpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zayanahmedpipelinesjavascriptdocker 
+          image: mycontainerregistryforfipakstesting.azurecr.io/zayanahmedpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
