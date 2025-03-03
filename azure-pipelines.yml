@@ -1,3 +1,20 @@
+# This Azure DevOps pipeline automates the build and deployment process for a containerized application. It consists of two main stages:
+
+#     Build Stage:
+#         Uses a self-hosted agent to build a Docker image from the specified Dockerfile.
+#         Pushes the built image to an Azure Container Registry (ACR).
+#         Uploads Kubernetes manifests as an artifact for deployment.
+
+#     Deploy Stage:
+#         Deploys the containerized application to a Kubernetes cluster.
+#         Creates an image pull secret for accessing the private container registry.
+#         Uses Kubernetes manifests to deploy the application.
+#         Handles deployments differently for regular branches and pull requests:
+#             For pull requests, it creates a separate namespace in Kubernetes and deploys the application for isolated testing.
+#             Retrieves the service’s external IP and provides a link for testing.
+
+
+
 trigger:
 - main
 
